@@ -1,0 +1,65 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="formUser" (ngSubmit)="submit()">
+        <p>Id:
+            <input type="number" class="form-control" readonly formControlName="id">
+        </p>
+        <p>Name:
+            <input type="text" class="form-control" formControlName="name">
+        </p>
+        <p>UserName:
+            <input type="text" class="form-control" formControlName="username">
+        </p>
+        <p>Email:
+            <input type="text" class="form-control" formControlName="email">
+        </p>
+        <p>Phone:
+            <input type="text" class="form-control" formControlName="phone">
+        </p>  
+        <p>Website:
+            <input type="text" class="form-control" formControlName="website">
+        </p>      
+        
+    </form>
+
+    <form [formGroup]="formAddress"> 
+        <p>Street:
+            <input type="text" class="form-control" formControlName="street">
+        </p>
+        <p>Suite:
+            <input type="text" class="form-control" formControlName="suite">
+        </p>
+        <p>City:
+            <input type="text" class="form-control" formControlName="city">
+        </p>
+        <p>Zipcode:
+            <input type="text" class="form-control" formControlName="zipcode">
+        </p>
+    </form>
+    <form [formGroup]="formGeo">
+        <p>Lat:
+            <input type="text" class="form-control" formControlName="lat">
+        </p>
+        <p>Lng:
+            <input type="text" class="form-control" formControlName="lng">
+        </p>
+    </form>
+    <form [formGroup]="formCompany">
+        <p>Bs:
+            <input type="text" class="form-control" formControlName="bs">
+        </p>
+        <p>Name:
+            <input type="text" class="form-control" formControlName="name">
+        </p>
+        <p>CatchPhrase:
+            <input type="text" class="form-control" formControlName="catchPhrase">
+        </p>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(null)">Close</button>
+    <button type="button" class="btn btn-primary" (click)="submit()">Registrar</button>
+</div>

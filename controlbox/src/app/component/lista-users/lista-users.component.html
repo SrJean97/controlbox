@@ -1,0 +1,5 @@
+<div class="container">
+    <div *ngFor="let user of data">
+        <app-user [data]="user" (delete)="deleteUser($event)" (edit)="editUser($event)"></app-user>
+    </div>
+</div>

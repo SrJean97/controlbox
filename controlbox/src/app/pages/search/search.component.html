@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Jean Carlos Casadiegos Duarte</a>
+  </div>
+</nav>
+<div class="text-end">
+  <button type="button" class="btn btn-primary" (click)="openModalRegister()">
+    <i class="fa-solid fa-plus"></i> Register
+  </button>
+</div>
+<!-- <app-modal #modalRegister></app-modal> -->
+<app-lista-users [data]= "listUsers" (delete)="openModalDelete($event)" (edit)="openModalRegister($event)"></app-lista-users>
+
