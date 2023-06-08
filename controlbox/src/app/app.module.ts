@@ -13,7 +13,6 @@ import { ModalComponent } from './component/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeleteComponent } from './component/modal/delete/delete.component';
-import { MapperModule } from '@dynamic-mapper/angular';
 
 
 @NgModule({
@@ -32,8 +31,7 @@ import { MapperModule } from '@dynamic-mapper/angular';
     HttpClientModule,
     BrowserAnimationsModule,
     NgbModule,
-    ReactiveFormsModule,
-    MapperModule.withProfiles([])
+    ReactiveFormsModule
   ],
   providers: [
 
